@@ -84,7 +84,7 @@ export default function PricingSection() {
                 </div>
               )}
               
-              <div className={`px-6 ${plan.isPopular ? "pt-12" : "pt-8"} pb-8`}>
+              <div className={plan.isPopular ? "px-6 pt-12 pb-8" : "px-6 pt-8 pb-8"}>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{plan.name}</h3>
                 <div className="flex items-baseline mb-4">
                   <span className="text-4xl font-extrabold text-gray-900 dark:text-white">{plan.price}</span>
