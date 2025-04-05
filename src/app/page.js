@@ -9,11 +9,12 @@ import TeamSection from "@/components/home/TeamSection";
 import FAQSection from "@/components/home/FAQSection";
 import CTASection from "@/components/home/CTASection";
 import PricingSection from "@/components/home/PricingSection";
-
+import CreativitySection from "@/components/home/CreativitySection";
 export default function Home() {
   return (
     <main>
       <HeroSection />
+      {/* <CreativitySection /> */}
       <ServicesSection />
       <FeaturesSection />
       <StatsSection />

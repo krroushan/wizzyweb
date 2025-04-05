@@ -6,60 +6,122 @@ export default function TeamSection() {
     {
       name: "Sarah Johnson",
       role: "CEO & Digital Strategist",
-      image: "/images/team/team-1.jpg",
+      image: "/avatar-1.jpg",
       bio: "With over 15 years of digital marketing experience, Sarah leads our team with innovative strategies and a passion for client success.",
+      skills: ["Strategy", "Leadership", "Analytics", "Client Relations"],
       social: {
         linkedin: "#",
         twitter: "#",
         email: "#",
       },
+      accentColor: "from-blue-500 to-cyan-400",
     },
     {
       name: "David Chen",
       role: "SEO Director",
-      image: "/images/team/team-2.jpg",
+      image: "/avatar-2.jpg",
       bio: "David specializes in technical SEO and search analytics, helping our clients achieve sustainable organic traffic growth.",
+      skills: ["Technical SEO", "Data Analysis", "Keyword Strategy", "Reporting"],
       social: {
         linkedin: "#",
         twitter: "#",
         email: "#",
       },
+      accentColor: "from-green-500 to-emerald-400",
     },
     {
       name: "Maria Rodriguez",
       role: "Content Strategy Lead",
-      image: "/images/team/team-3.jpg",
+      image: "/avatar-3.jpg",
       bio: "Maria crafts compelling content strategies that engage audiences and drive conversions across all digital channels.",
+      skills: ["Content Creation", "Storytelling", "Brand Voice", "Editorial Planning"],
       social: {
         linkedin: "#",
         twitter: "#",
         email: "#",
       },
+      accentColor: "from-purple-500 to-violet-400",
     },
     {
       name: "James Wilson",
       role: "Paid Media Specialist",
-      image: "/images/team/team-4.jpg",
+      image: "/avatar-4.jpg",
       bio: "James optimizes paid advertising campaigns across multiple platforms to maximize ROI and achieve client objectives.",
+      skills: ["PPC", "Social Ads", "Budget Optimization", "A/B Testing"],
       social: {
         linkedin: "#",
         twitter: "#",
         email: "#",
       },
+      accentColor: "from-amber-500 to-orange-400",
+    },
+  ];
+
+  const teamStats = [
+    {
+      label: "Team Members",
+      value: "20+",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      ),
+      bgColor: "bg-blue-100 dark:bg-blue-900/30",
+      textColor: "text-blue-600 dark:text-blue-400",
+    },
+    {
+      label: "Years Experience",
+      value: "12+",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      bgColor: "bg-green-100 dark:bg-green-900/30",
+      textColor: "text-green-600 dark:text-green-400",
+    },
+    {
+      label: "Office Locations",
+      value: "5",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+      bgColor: "bg-purple-100 dark:bg-purple-900/30",
+      textColor: "text-purple-600 dark:text-purple-400",
+    },
+    {
+      label: "Completed Projects",
+      value: "250+",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      ),
+      bgColor: "bg-amber-100 dark:bg-amber-900/30",
+      textColor: "text-amber-600 dark:text-amber-400",
     },
   ];
 
   return (
-    <section className="py-24 px-4 md:px-12 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section className="py-24 px-4 md:px-12 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 z-0"></div>
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200/20 dark:bg-blue-900/20 rounded-full filter blur-3xl"></div>
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/20 dark:bg-purple-900/20 rounded-full filter blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Meet Our Expert Team
+          <span className="inline-block px-3 py-1 mb-4 text-sm font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+            The Dream Team
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+            Meet Our Talented Experts
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-green-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Our talented professionals bring decades of experience and a passion
-            for digital marketing excellence
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
+            Our diverse team of specialists brings passion, creativity, and expertise to every project
           </p>
         </div>
 
@@ -67,45 +129,32 @@ export default function TeamSection() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl"
+              className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 dark:border-gray-700"
             >
-              <div className="aspect-w-1 aspect-h-1 relative">
-                <div className="w-full h-0 pt-[100%] bg-gradient-to-br from-blue-100 to-green-100 dark:from-blue-900/30 dark:to-green-900/30 relative">
-                  {/* Placeholder for image */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative w-20 h-20 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-                      <svg
-                        className="absolute w-full h-full text-gray-400 dark:text-gray-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                          clipRule="evenodd"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
+              {/* Colorful top accent */}
+              <div className={`h-2 w-full bg-gradient-to-r ${member.accentColor}`}></div>
+              
+              {/* Image with overlay */}
+              <div className="relative h-64 overflow-hidden">
+                {/* Actual profile image */}
+                <div className="absolute inset-0">
+                  <Image 
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-              </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {member.bio}
-                </p>
-
-                <div className="flex space-x-3">
+                {/* Animated gradient overlay on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-80 transition-opacity duration-500 bg-gradient-to-b from-transparent to-gray-900"></div>
+                
+                {/* Social icons that appear on hover */}
+                <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-3 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                   <a
                     href={member.social.linkedin}
-                    className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                    className="w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-gray-700 hover:bg-blue-500 hover:text-white transition-colors"
+                    aria-label="LinkedIn"
                   >
                     <svg
                       className="w-4 h-4"
@@ -118,7 +167,8 @@ export default function TeamSection() {
                   </a>
                   <a
                     href={member.social.twitter}
-                    className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                    className="w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-gray-700 hover:bg-blue-400 hover:text-white transition-colors"
+                    aria-label="Twitter"
                   >
                     <svg
                       className="w-4 h-4"
@@ -131,7 +181,8 @@ export default function TeamSection() {
                   </a>
                   <a
                     href={`mailto:${member.social.email}`}
-                    className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-blue-900/30 dark:hover:text-blue-400 transition-colors"
+                    className="w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-gray-700 hover:bg-green-500 hover:text-white transition-colors"
+                    aria-label="Email"
                   >
                     <svg
                       className="w-4 h-4"
@@ -149,20 +200,74 @@ export default function TeamSection() {
                   </a>
                 </div>
               </div>
+
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 transition-all duration-300">
+                  {member.name}
+                </h3>
+                <p className={`text-transparent bg-clip-text bg-gradient-to-r ${member.accentColor} font-medium mb-3`}>
+                  {member.role}
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 h-[4.5rem]">
+                  {member.bio}
+                </p>
+
+                {/* Skills tags */}
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {member.skills.map((skill, i) => (
+                    <span 
+                      key={i} 
+                      className="px-2 py-1 text-xs rounded-md bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Bottom hover effect - animated bar */}
+              <div className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${member.accentColor} group-hover:w-full transition-all duration-700 ease-in-out`}></div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-            Our dedicated team is ready to help your business grow
-          </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center h-12 px-8 font-medium transition-colors bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white rounded-lg shadow-lg hover:shadow-xl"
-          >
-            Work With Us
-          </a>
+        {/* Team stats section - displayed in a single row */}
+        <div className="mt-20">
+          <div className="flex flex-wrap justify-between items-center gap-4 bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+            {teamStats.map((stat, index) => (
+              <div key={index} className="flex-1 min-w-[200px] text-center group">
+                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-lg ${stat.bgColor} ${stat.textColor} mb-3 mx-auto group-hover:scale-110 transition-transform`}>
+                  {stat.icon}
+                </div>
+                <h4 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-1">{stat.value}</h4>
+                <p className="text-gray-600 dark:text-gray-400">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20 text-center">
+          <div className="max-w-2xl mx-auto px-8 py-10 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Join Our Creative Team
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-8">
+              We're always looking for talented individuals who are passionate about digital marketing and innovation
+            </p>
+            <a
+              href="#careers"
+              className="inline-flex items-center justify-center h-12 px-8 font-medium rounded-lg relative overflow-hidden group"
+            >
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:from-blue-600 group-hover:to-indigo-600"></span>
+              <span className="absolute inset-0 w-full h-full opacity-0 transition-all duration-300 ease-out bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:opacity-100"></span>
+              <span className="relative text-white flex items-center">
+                View Open Positions
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
