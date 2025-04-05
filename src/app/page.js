@@ -8,6 +8,7 @@ import ProcessSection from "@/components/home/ProcessSection";
 import TeamSection from "@/components/home/TeamSection";
 import FAQSection from "@/components/home/FAQSection";
 import CTASection from "@/components/home/CTASection";
+import PricingSection from "@/components/home/PricingSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <CaseStudiesSection />
       <TeamSection />
       <TestimonialsSection />
+      <PricingSection />
       <FAQSection />
       <CTASection />
     </main>
